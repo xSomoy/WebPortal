@@ -51,9 +51,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
 
     <div class="role">
-
-    
-        
+        <a href="clientData.php" class="acq">Acquisition</a>
+        <br>
+        <a href="clientData.php" class="dis">Disposition</a>
     </div>
    </section>
 

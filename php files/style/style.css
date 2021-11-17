@@ -79,7 +79,7 @@ body {
 
 
 .main {
-    justify-content: left;
+    display: flex;
 }
 
 .welcome{
@@ -104,6 +104,7 @@ body {
     bottom: -65px ;
     left: 0px;
     color: white;
+    font-size: 14px;
 }
 
 .reset {
@@ -111,10 +112,44 @@ body {
     bottom: -65px ;
     left: 100px;
     color: white;
+    font-size: 14px;
 }
 
 .role {
     /* display: flex; */
     width: 50%;
-    
+   
+    position: relative;
 }
+
+.role a {
+    background-color: rgba(255, 255, 255, 0);
+    border: white 1px solid;
+    padding: 20px 150px;
+    border-radius: 5px;
+    transition: all .2s;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.role a:hover {
+
+    color: skyblue;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+}
+.acq {
+    position: absolute;
+    top: 250px;
+    right: 50px;
+}
+
+.dis {
+    position: absolute;
+    top: 330px;
+    right: 50px;
+}
+
+
+
