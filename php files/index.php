@@ -20,24 +20,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             font: 14px sans-serif;
             text-align: center;
             position: relative;
-            background-image: url(/assets/bg2.jpg);
-        }
-
-        .logout {
-	position: absolute;
-	top: -10px !important;
-	right: 15px !important;
-	color: white;
-}
-
-        .reset{
-            position: absolute;
-            top: -10px !important;
-            left: 20px !important;
-            color: white;
-        }
-
-        .welcome{
+            background-image: url(/assets/bg3.jpg);
             color:white;
         }
     </style>
@@ -47,20 +30,32 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <div class="container">
 <!--    Logout And Reset Buttons -->
-   
-    <a href="reset-password.php" class="login reset">Reset Password</a>
-    <a href="logout.php" class="login logout">Log Out</a>
-
+  
 <!-- Your Actual HTML Code Goes Below Here -->
 
 
-    <div class="welcome">
+   <section class="main">
+
+   <div class="welcome">
         <h1>Hi,<b> <?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
-        <p>Welcome to our company Web Portal for maintaining Client information.
+        <p>Welcome to our company Web Portal for maintaining client information.<br>
             You can select your role in the right side. <br>
+            You can submit a new entry by chosing Acquisition. <br>
+            Or modify / view existing entry by chosing Disposition.
+             
+    <a href="reset-password.php" class="login reset">Reset Password</a>
+    <a href="logout.php" class="login logout">Log Out</a>
+
             
         </p>
     </div>
+
+    <div class="role">
+
+    
+        
+    </div>
+   </section>
 
     </div>
 </body>
