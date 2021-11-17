@@ -55,9 +55,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 
     <div class="welcome">
-        <h1>Hi, <b>
-         <?php echo htmlspecialchars($_SESSION["username"]); ?>
-        </b></h1>
+        <h1>Hi,<b> <?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
+        <p>Welcome to our company Web Portal for maintaining Client information.
+            You can select your role in the right side. <br>
+            
+        </p>
     </div>
 
     </div>
