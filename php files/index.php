@@ -44,14 +44,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 
 <body>
+
+<div class="container">
 <!--    Logout And Reset Buttons -->
    
     <a href="reset-password.php" class="login reset">Reset Password</a>
-    <a href="logout.php" class="login logout">Sign Out</a>
+    <a href="logout.php" class="login logout">Log Out</a>
 
 <!-- Your Actual HTML Code Goes Below Here -->
     <div class="welcome">
         <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
+    </div>
+    
     </div>
 </body>
 
