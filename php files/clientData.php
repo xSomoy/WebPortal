@@ -28,6 +28,8 @@ require_once "config.php";
     </style>
 </head>
 <body>
+        
+
     <table>
         <tr>
         <th>Id</th>
