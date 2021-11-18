@@ -18,12 +18,12 @@ CREATE TABLE IF NOT EXISTS `users` (
 CREATE TABLE IF NOT EXISTS `clientinfo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
+  `gender` ENUM('m','f','o') NOT NULL,
   `email` varchar(255) NOT NULL,
   `phone` varchar(15) NOT NULL,
   `address` varchar(255) NOT NULL,
+  `status` ENUM('hot','warm','cold') NOT NULL,
   `note` varchar(1000) NOT NULL,
-  `status` varchar(10) NOT NULL,
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
