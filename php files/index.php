@@ -11,7 +11,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <head>
     <meta charset="UTF-8">
-    <title>Welcome</title>
+    <title>MCRM</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
@@ -38,7 +38,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
    <div class="welcome">
         <h1>Hi,<b> <?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
-        <p>Welcome to our company Web Portal for maintaining client information.<br>
+        <p>Welcome to  <b>MCRM Solution</b> for maintaining client information.<br>
             You can select your role in the right side. <br>
             You can submit a new entry by chosing Acquisition. <br>
             Or modify / view existing entry by chosing Disposition.
