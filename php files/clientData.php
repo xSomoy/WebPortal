@@ -11,6 +11,11 @@ require_once "config.php";
 <html>
 <head>
     <title>Table with database</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
 <style>
     table {
             border-collapse: collapse;
@@ -28,7 +33,24 @@ require_once "config.php";
     </style>
 </head>
 <body>
-        
+        <form action="newEntry.php">
+        <input type="text" name="name">
+        <input type="checkbox" name="gender" value="m">
+        <input type="checkbox" name="gender" value="f">
+        <input type="checkbox" name="gender" value="o">
+        <input type="email" name="email">
+        <input type="number" name="phone">
+        <input type="text" name="adress">
+        <input type="checkbox" name="status" value="hot">
+        <input type="checkbox" name="status" value="warm">
+        <input type="checkbox" name="status" value="cold">
+        <input type="textarea" name="note">
+        <input type="submit" value="Submit">
+
+        </form>
+
+
+
 
     <table>
         <tr>
@@ -54,5 +76,6 @@ require_once "config.php";
 $link->close();
 ?>
 </table>
+
 </body>
 </html>

@@ -1,16 +1,26 @@
 <?php
-	$firstName = $_POST['firstName'];
-	$lastName = $_POST['lastName'];
+
+
+session_start();
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+  header("location: index.php");
+  exit;
+}
+require_once "config.php";
+
+
+	$firstName = $_POST['name'];
 	$gender = $_POST['gender'];
 	$email = $_POST['email'];
-	$password = $_POST['password'];
-	$number = $_POST['number'];
+	$phone = $_POST['phone'];
+	$address = $_POST['address'];
+	$status = $_POST['status'];
+	$note = $_POST['note'];
 
-	// Database connection
-	$conn = new mysqli('localhost','root','','test');
-	if($conn->connect_error){
-		echo "$conn->connect_error";
-		die("Connection Failed : ". $conn->connect_error);
+	// Database linkection
+	if($link->connect_error){
+		echo "$link->connect_error";
+		die("Connection Failed : ". $link->connect_error);
 	} else {
 		$stmt = $conn->prepare("insert into registration(firstName, lastName, gender, email, password, number) values(?, ?, ?, ?, ?, ?)");
 		$stmt->bind_param("sssssi", $firstName, $lastName, $gender, $email, $password, $number);
