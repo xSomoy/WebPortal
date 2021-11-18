@@ -1,2 +1,2 @@
 /* SQL Script for Creating The DB */
-CREATE DATABASE portalDB
+CREATE DATABASE clientinfo
