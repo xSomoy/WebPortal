@@ -64,6 +64,7 @@ require_once "config.php";
     </style>
 </head>
 <body>
+<a href="index.php" class="login home client">Home</a>
 <div class="topButton">
     <div class="newSub">
         <a class="login" href="newEntry.php">Submit New Enter</a>

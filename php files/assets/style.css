@@ -201,5 +201,17 @@ body {
     padding: 15px;
     margin-left: 30%;
 }
-  
+.home {
+	position: absolute;
+	margin-top: 20px;
+	color: white;
+	right: 20px;
+	top: -10px;
+	width: 35px;
+}
+
+.client {
+	width: 68px;
+	right: 35px;
+}
 

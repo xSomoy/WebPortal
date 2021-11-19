@@ -41,7 +41,7 @@ require_once "config.php";
 </style>
 </head>
 <body>
-  
+  <a href="index.php" class="login home ">Home</a>
 <section class="form">
   <div class="wrapper">
 <form action="entryReg.php" method="POST" id="entryForm">
