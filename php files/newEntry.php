@@ -2,53 +2,26 @@
 
 
 session_start();
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === false){
   header("location: index.php");
   exit;
 }
 require_once "config.php";
 
 
-	$name = $_POST['name'];
-	$gender = $_POST['gender'];
-	$email = $_POST['email'];
-	$phone = $_POST['phone'];
-	$address = $_POST['address'];
-	$status = $_POST['status'];
-	$note = $_POST['note'];
+?>	
+    <form action="entryReg.php" method="POST">
+    <input type="text" name="name">
+    <input type="radio" name="gender" value="m">
+    <input type="radio" name="gender" value="f">
+    <input type="radio" name="gender" value="o">
+    <input type="email" name="email">
+    <input type="number" name="phone">
+    <input type="text" name="address">
+    <input type="radio" name="status" value="hot">
+    <input type="radio" name="status" value="warm">
+    <input type="radio" name="status" value="cold">
+    <input type="textarea" name="note">
+    <input type="submit" value="Submit">
 
-	// Database linkection
-	// if($link->connect_error){
-	// 	echo "$link->connect_error";
-	// 	die("Connection Failed : ". $link->connect_error);
-	// } else {
-	// 	$stmt = $link->prepare("insert into clientinfo(name, gender, email, phone, address, status) values(?, ?, ?, ?, ?, ?, ?)");
-	// 	$stmt->bind_param("sssssi", $name, $gender, $email, $phone, $address, $status, $note);
-	// 	$execval = $stmt->execute();
-	// 	echo $execval;
-	// 	echo "Registration successfully...";
-	// 	$stmt->close();
-	// 	$link->close();
-	// }
-
-
-	
-	// Create connection
-
-	// Check connection
-	if ($link->connect_error) {
-	  die("Connection failed: " . $link->connect_error);
-	}
-	
-	$sql = "INSERT INTO clientinfo (name, gender, phone)
-	VALUES ('John', 'Doe', 'john@example.com')";
-	
-	if ($link->query($sql) === TRUE) {
-	  echo "New record created successfully";
-	} else {
-	  echo "Error: " . $sql . "<br>" . $link->error;
-	}
-	
-	$link->close();
-
-?>
+    </form>
