@@ -27,6 +27,16 @@ require_once "config.php";
             background-image: url(/assets/bg4.jpg);
             color:white;
         }
+    .form {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      width: 325px;
+    }
+    .form p {
+      font-weight: 700;
+      font-size: 24px;
+      font-family: serif;
+    }
   
 </style>
 </head>
@@ -35,22 +45,21 @@ require_once "config.php";
 <section class="form">
   <div class="wrapper">
 <form action="entryReg.php" method="POST" id="entryForm">
+  <p>New Client Information</p>
     <input class="inpt2"type="text" name="name" placeholder="Client Name" required>
-    <!-- <input class="inpt3" type="radio" name="gender" value="m" >
-    <input class="inpt3" type="radio" name="gender" value="f">
-    <input class="inpt3" type="radio" name="gender" value="o"> -->
+   <span>Gender:</span>
   <label>
-  <input type="radio" name="gender" checked="checked" value="m">
+  <input type="radio" class="inpt3" name="gender" checked="checked" value="m">
   Male
 </label>
 
 <label>
-  <input type="radio" name="gender" value="m">
+  <input type="radio" class="inpt3" name="gender" value="f">
   Female
 </label>
 
 <label class="container">
-  <input type="radio" name="gender" value="m">
+  <input type="radio" class="inpt3" name="gender" value="o">
   Other
 </label>
 
@@ -62,24 +71,24 @@ require_once "config.php";
     <!-- <input class="inpt3" type="radio" name="status" value="hot">
     <input class="inpt3" type="radio" name="status" value="warm">
     <input class="inpt3" type="radio" name="status" value="cold"> -->
-
+<span>Status: </span>
     <label>
-  <input type="radio" name="status" checked="checked" value="hot">
+  <input type="radio" class="inpt3" name="status" checked="checked" value="hot">
   Hot
 </label>
 
 <label>
-  <input type="radio" name="status" value="warm">
+  <input type="radio" class="inpt3" name="status" value="warm">
   Warm
 </label>
 
 <label class="container">
-  <input type="radio" name="status" value="cold">
+  <input type="radio" class="inpt3" name="status" value="cold">
   Cold
 </label>
 
     <input class="inpt2" type="text" class="inpt2" name="note" placeholder="Note">
-    <input class="login" type="submit" value="Submit">
+    <input class="login submit" type="submit" value="Submit">
 
     </form>
 
