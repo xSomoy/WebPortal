@@ -106,7 +106,7 @@ require_once "config.php";
         if ($link->connect_error) {
         die("Connection failed: " . $link->connect_error);
         }
-        $sql = "SELECT * FROM clientinfo";
+        $sql = "SELECT * FROM clientinfo Where status='Warm'";
         $result = $link->query($sql);
         if ($result-> num_rows > 0) {
     // output data of each row
