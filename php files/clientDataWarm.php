@@ -10,7 +10,7 @@ require_once "config.php";
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Table with database</title>
+    <title>Client - Warm</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
 
@@ -58,19 +58,7 @@ require_once "config.php";
         color: white;
     }
 
-    .filter{
-        padding: 10px 15px;
-        margin: 10px;
-        background-color: #f5f5f5;
-        border-radius: 10px;
-
-    }
-
-    .filterDiv {
-        padding: 14px;
-        display: flex;
-        justify-content:space-around; 
-    }
+  
 
  
     </style>
@@ -81,10 +69,10 @@ require_once "config.php";
         <a class="login" href="newEntry.php">Submit New Enter</a>
     </div>
     <div class="filterDiv">
-    <a href="clientData.php" class="login">All</a>
-  <a href="clientDataHot.php" class="login">Hot</a>
-  <a href="clientDataWarm.php" class="login">Warm</a>
-  <a href="clientDataCold.php" class="login">Cold</a>
+    <a href="clientData.php" class="filter">All</a>
+  <a href="clientDataHot.php" class="filter">Hot</a>
+  <a href="clientDataWarm.php" class="filter">Warm</a>
+  <a href="clientDataCold.php" class="filter">Cold</a>
     </div>
 </div>
     <table>

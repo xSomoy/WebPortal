@@ -18,7 +18,7 @@ require_once "config.php";
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/assets/style.css">
-  <title>Document</title>
+  <title>Client Entry</title>
 <style>
   body {
             font: 14px sans-serif;
@@ -55,9 +55,7 @@ require_once "config.php";
 </label>
 
 
-    <input class="inpt2"type="text" name="name" placeholder="Client Name" required>
-    <input class="inpt2"type="text" name="name" placeholder="Client Name" required>
-    <input class="inpt2"type="text" name="name" placeholder="Client Name" required>
+    
     <input class="inpt2" type="email" name="email" placeholder="Email" required>
     <input class="inpt2" type="tel" name="phone" placeholder="Phone" required>
     <input class="inpt2" type="text" name="address" placeholder="Address"required>

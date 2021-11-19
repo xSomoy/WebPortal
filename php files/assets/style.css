@@ -167,3 +167,27 @@ body {
 
 }
 
+.filter{
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: rgba(245, 245, 245, 0.281);
+    color: white;
+
+}
+
+.filter:hover{
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.596);
+}
+
+.filterDiv {
+    padding: 14px;
+    display: flex;
+    justify-content:space-around; 
+}
+  
+

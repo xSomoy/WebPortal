@@ -30,7 +30,7 @@ require_once "config.php";
     // Attempt insert query execution
     $sql = "insert into clientinfo (name, gender, email, phone, address, status, note) values ('$name', '$gender', '$email', '$phone', '$address', '$status', '$note')";
     if(mysqli_query($link, $sql)){
-        echo "Records inserted successfully.";
+        header("location: newEntry.php");
     } else{
         echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
     }
