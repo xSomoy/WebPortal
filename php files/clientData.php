@@ -17,54 +17,121 @@ require_once "config.php";
     <link rel="stylesheet" href="/style/style.css">
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
 <style>
+    body{
+        background-image: url(/assets/bg3.jpg);
+    }
     table {
+            
             border-collapse: collapse;
             width: 100%;
-            color: #588c7e;
-            font-family: monospace;
-            font-size: 25px;
-            text-align: left;
+            line-height: 20px;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
             }
     th {
-        background-color: #588c7e;
+        background-color: black;
         color: white;
+        padding: 15px;
+        /* border: 1px solid skyblue; */
+        text-align: center;
         }
-    tr:nth-child(even) {background-color: #f2f2f2}
+    td{
+        padding: 10px;
+    }
+    tr:nth-child(even) {
+        background-color: #2b2b2b;
+        /* color: black; */
+        
+    }
+    .topButton {
+        display: flex;
+        
+    }
+
+    .newSub{
+        padding: 30px;
+        
+    }
+
+    .newSub a {
+        color: white;
+    }
+
+    .filter{
+        padding: 10px 15px;
+        margin: 10px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+
+    }
+
+    .filterDiv {
+        padding: 14px;
+        display: flex;
+        justify-content:space-around; 
+    }
+
+ 
     </style>
 </head>
 <body>
-
-
-
-        <a href="newEntry.php">Submit New Enter</a>
-
-
-
-
+<div class="topButton">
+    <div class="newSub">
+        <a class="login" href="newEntry.php">Submit New Enter</a>
+    </div>
+    <div class="filterDiv">
+   <button class="filter" onsubmit="allResult();">All</button>
+   <button class="filter">Hot</button>
+   <button class="filter">Warm</button>
+   <button class="filter">Cold</button>
+    </div>
+</div>
     <table>
         <tr>
         <th>Id</th>
-        <th>Username</th>
-        <th>Password</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Status</th>
+        <th>Note</th>
 </tr>
+
+<div id="result">
 <?php
     
-// Check connection
-    if ($link->connect_error) {
-    die("Connection failed: " . $link->connect_error);
-    }
-    $sql = "SELECT id, name, email FROM clientinfo";
-    $result = $link->query($sql);
-    if ($result-> num_rows > 0) {
-// output data of each row
-        while($row = $result->fetch_assoc()) {
-            echo "<tr><td>" . $row["id"]. "</td><td>" . $row["name"] . "</td><td>". $row["email"]. "</td></tr>";
+    // Check connection
+        if ($link->connect_error) {
+        die("Connection failed: " . $link->connect_error);
         }
-        echo "</table>";
-    } else { echo "0 results"; }
-$link->close();
-?>
+        $sql = "SELECT * FROM clientinfo";
+        $result = $link->query($sql);
+        if ($result-> num_rows > 0) {
+    // output data of each row
+            while($row = $result->fetch_assoc()) {
+                echo "<tr>
+                    <td>" . $row["id"]. "</td>
+                    <td>" . $row["name"] . "</td>
+                    <td>". $row["gender"]. "</td>
+                    <td>" .$row["email"]. "</td>
+                    <td>" .$row["phone"]. "</td>
+                    <td>" .$row["address"]. "</td>
+                    <td>" .$row["status"]. "</td>
+                    <td>" .$row["note"]. "</td>
+                    <td>" .  "</td>
+                    </tr>";
+            }
+            echo "</table>";
+        } else { echo "0 results"; }
+    $link->close();
+    ?>
+</div>
+
 </table>
+
+<script src="/assets/script.js"></script>
 
 </body>
 </html>
