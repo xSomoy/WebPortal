@@ -77,7 +77,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>MCRM</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="/assets/style.css">
     <style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }

@@ -152,4 +152,18 @@ body {
 }
 
 
+.inpt2 {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    background-color: rgba(255, 99, 71, 0);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.inpt3 {
+    padding: 5px;
+     text-align: left;
+
+}
 
