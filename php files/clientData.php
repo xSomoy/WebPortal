@@ -33,7 +33,7 @@ require_once "config.php";
     </style>
 </head>
 <body>
-        <form action="newEntry.php">
+        <!-- <form action="newEntry.php" method="POST">
         <input type="text" name="name">
         <input type="radio" name="gender" value="m">
         <input type="radio" name="gender" value="f">
@@ -47,7 +47,10 @@ require_once "config.php";
         <input type="textarea" name="note">
         <input type="submit" value="Submit">
 
-        </form>
+        </form> -->
+
+
+        <a href="newEntry.php">Submit New Enter</a>
 
 
 
