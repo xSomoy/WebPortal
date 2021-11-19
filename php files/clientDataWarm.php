@@ -13,7 +13,7 @@ require_once "config.php";
     <title>Client - Warm</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
 <style>
