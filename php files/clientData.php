@@ -35,15 +35,15 @@ require_once "config.php";
 <body>
         <form action="newEntry.php">
         <input type="text" name="name">
-        <input type="checkbox" name="gender" value="m">
-        <input type="checkbox" name="gender" value="f">
-        <input type="checkbox" name="gender" value="o">
+        <input type="radio" name="gender" value="m">
+        <input type="radio" name="gender" value="f">
+        <input type="radio" name="gender" value="o">
         <input type="email" name="email">
         <input type="number" name="phone">
         <input type="text" name="adress">
-        <input type="checkbox" name="status" value="hot">
-        <input type="checkbox" name="status" value="warm">
-        <input type="checkbox" name="status" value="cold">
+        <input type="radio" name="status" value="hot">
+        <input type="radio" name="status" value="warm">
+        <input type="radio" name="status" value="cold">
         <input type="textarea" name="note">
         <input type="submit" value="Submit">
 

@@ -9,7 +9,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 require_once "config.php";
 
 
-	$firstName = $_POST['name'];
+	$name = $_POST['name'];
 	$gender = $_POST['gender'];
 	$email = $_POST['email'];
 	$phone = $_POST['phone'];
@@ -18,16 +18,37 @@ require_once "config.php";
 	$note = $_POST['note'];
 
 	// Database linkection
-	if($link->connect_error){
-		echo "$link->connect_error";
-		die("Connection Failed : ". $link->connect_error);
-	} else {
-		$stmt = $conn->prepare("insert into registration(firstName, lastName, gender, email, password, number) values(?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssssi", $firstName, $lastName, $gender, $email, $password, $number);
-		$execval = $stmt->execute();
-		echo $execval;
-		echo "Registration successfully...";
-		$stmt->close();
-		$conn->close();
+	// if($link->connect_error){
+	// 	echo "$link->connect_error";
+	// 	die("Connection Failed : ". $link->connect_error);
+	// } else {
+	// 	$stmt = $link->prepare("insert into clientinfo(name, gender, email, phone, address, status) values(?, ?, ?, ?, ?, ?, ?)");
+	// 	$stmt->bind_param("sssssi", $name, $gender, $email, $phone, $address, $status, $note);
+	// 	$execval = $stmt->execute();
+	// 	echo $execval;
+	// 	echo "Registration successfully...";
+	// 	$stmt->close();
+	// 	$link->close();
+	// }
+
+
+	
+	// Create connection
+
+	// Check connection
+	if ($link->connect_error) {
+	  die("Connection failed: " . $link->connect_error);
 	}
+	
+	$sql = "INSERT INTO clientinfo (name, gender, phone)
+	VALUES ('John', 'Doe', 'john@example.com')";
+	
+	if ($link->query($sql) === TRUE) {
+	  echo "New record created successfully";
+	} else {
+	  echo "Error: " . $sql . "<br>" . $link->error;
+	}
+	
+	$link->close();
+
 ?>
